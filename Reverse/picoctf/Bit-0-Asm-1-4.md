@@ -11,19 +11,19 @@ we need to find the value of eax
 ## we can call rbp-0xc as a and rbp-0x8 as b
 
 mov    DWORD PTR [rbp-0xc],0x9fe1a
-### a = 0x9fe1a
+#### a = 0x9fe1a
 mov    DWORD PTR [rbp-0x8],0x4
-### b = 0x4
+#### b = 0x4
 mov    eax,DWORD PTR [rbp-0xc] 
-### eax = a
+#### eax = a
 imul   eax,DWORD PTR [rbp-0x8]
-### eax = eax * b
+#### eax = eax * b
 add    eax,0x1f5
-### eax = eax + 0x1f5
+#### eax = eax + 0x1f5
 mov    DWORD PTR [rbp-0x4],eax
-### save result
+#### save result
 mov    eax,DWORD PTR [rbp-0x4]
-### save result
+#### save result
 
 now we can mathematically write this as 
 result = (0x9fe1a * 4) + 0x1f5
@@ -32,12 +32,12 @@ find the hex and find it's equivalent ascii
 
 # Bit-O-Asm4
 
-<+15>:    mov    DWORD PTR [rbp-0x4],0x9fe1a
-<+22>:    cmp    DWORD PTR [rbp-0x4],0x2710
-<+29>:    jle    0x55555555514e <main+37>
-<+31>:    sub    DWORD PTR [rbp-0x4],0x65
-<+35>:    jmp    0x555555555152 <main+41>
-<+37>:    add    DWORD PTR [rbp-0x4],0x65
+<+15>:    mov    DWORD PTR [rbp-0x4],0x9fe1a <br>
+<+22>:    cmp    DWORD PTR [rbp-0x4],0x2710 <br>
+<+29>:    jle    0x55555555514e <main+37> <br>
+<+31>:    sub    DWORD PTR [rbp-0x4],0x65 <br>
+<+35>:    jmp    0x555555555152 <main+41> <br>
+<+37>:    add    DWORD PTR [rbp-0x4],0x65 <br>
 <+41>:    mov    eax,DWORD PTR [rbp-0x4]
 
 

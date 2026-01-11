@@ -4,11 +4,11 @@ This repo contains Writeups for ctf challenges in multiple categories from multi
 
 Categories include 
 
-Reverse Engineering
-Binary Exploitation
-Web Exploitation
-Cryptography
-AI
-Forensics 
-OSNIT 
+Reverse Engineering <br>
+Binary Exploitation <br>
+Web Exploitation <br>
+Cryptography <br>
+AI <br>
+Forensics <br> 
+OSNIT <br>
 Genaral Skills

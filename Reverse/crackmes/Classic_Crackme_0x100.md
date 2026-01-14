@@ -17,4 +17,4 @@ for i_0 in range(len_str):
     r = (random2 & secret3) + (secret3 & (random2 >> 4))
     r_values.append(r)
 
-this is the encryption algorithm
+this is the decryption algorithm

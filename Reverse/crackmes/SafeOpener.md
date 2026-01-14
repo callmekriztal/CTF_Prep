@@ -21,3 +21,5 @@ java file_name
 given a .class it is a corrupted file and cause run time error
 to get additional info we can decomile it for this, use javap
 javap -c class_name.class
+
+the flag was visible in the decomplied output

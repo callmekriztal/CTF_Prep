@@ -1,0 +1,24 @@
+#PicoCTF Stegnography Writeup
+
+##Challenge Overview:
+This challenge is involved in extracting a flag hidden in a image file.
+
+#STEP 1:
+Initial Inspect
+  -check its metadate 
+'''bash
+  file red.png
+  exiftool red.png
+  strings red.png or strings red.png | less'''
+nothing found :-(
+
+##Extract
+binwalk -e red.png - extracted directory, indicating that hidden data existed inside the image.
+
+After the Extarction,no readable file was directly visible. Since the flag was within image with colour "red" ,steg sus!
+LSB Stegnography technique used using CyberChef (stego tools)
+
+The extracted data was in base64 -> decode -> flag
+
+##FLAG:
+  -> picoCTF{r3d_1s_th3_ult1m4t3_cur3_f0r_54dn355_}
